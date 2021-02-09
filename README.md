@@ -5,11 +5,11 @@ Q. 임의 문자열을 추가 삭제할 수 있는 (SNS 태그 입력) 컴포넌
 
 ## 기능 요구사항
 
-1. 각 버튼이 선택이 되었는지 안되었는지를 확인할 수 있다.
+1. 텍스트 입력 후 엔터를 치면 리스트의 맨 앞에 추가가 된다.
 ![요구사항 첫번째](./src/solution/presenter/chips/assets/chips_scope1.png)
 
 
-2. 여러개의 버튼 중 하나의 버튼만 toggle 할 수 있다.
+2. 리스트 중에 아이템을 삭제 할 수 있다.
 ![요구사항 두번째](./src/solution/presenter/chips/assets/chips_scope2.png)
 
 
