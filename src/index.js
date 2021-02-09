@@ -1,17 +1,20 @@
 // Import stylesheets
 import './style.css';
-import { ToggleButton } from './question/toggle-button';
+import { Chips } from './question/chips';
 
 
 const bootstrap = () => {
     const buttonData = [
-        'Bold', 'Italic', 'Underline'
+        '#vue', '#react', '#angular'
     ]
-    const toggleButton = new ToggleButton({
-        selector: '#toggle-button',
+    const chips = new Chips({
+        selector: '#chips',
         data: buttonData
-    })
-}
+    });
 
+    document.querySelector('.result-button').addEventListener('click', () => {
+        
+    });
+}
 
 bootstrap();
