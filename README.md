@@ -38,4 +38,4 @@ Run `npm run dev`
 ## 주요 학습 키워드
 - 동적으로 추가되는 element 
 - templete 분리
-- element.insertAdjacentElement method 활용
+- element.insertAdjacentElement 함수 활용
