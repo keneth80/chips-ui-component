@@ -47,23 +47,6 @@ export class Chips {
     }
 
     /*
-    * title: chip item templete
-    * input: chip label
-    * output: chip element
-    * description: chip item의 템플릿을 관리한다.
-    */
-    chipTemplete(data) {
-        const newItem = document.createElement('div');
-        newItem.classList.add('chips-item');
-        newItem.innerHTML = `
-            <span class="chips-label">${data}</span>
-            <img class="chips-close" 
-                src="./src/solution/presenter/chips/assets/close.svg">
-        `;
-        return newItem;
-    }
-
-    /*
     * title: event binding method
     * description: 모든 이벤트를 처리한다.
     */
@@ -85,22 +68,6 @@ export class Chips {
         </p>
         <!-- afterend -->
         */
-        this.inputElement.addEventListener('keyup', (event) => {
-            if (event.keyCode === 13) {
-                // 새로운 아이템 생성
-                const newItem = this.chipTemplete(event.target.value);
-                // 삭제 이벤트 바인딩
-                newItem.querySelector('.chips-close').addEventListener('click', () => {
-                    newItem.remove();
-                });
-                // 컨테이너에 추가
-                this.container.insertAdjacentElement('afterbegin', newItem);
-                // 데이터의 앞단에 새로운 텍스트 추가
-                this.data.unshift(event.target.value);
-                // input value 초기화.
-                event.target.value = '';
-            }
-        });
 
         // q3. 입력된 문자열을 삭제할 수 있도록 하시오.
         // TODO: Write JS code here!'
@@ -108,4 +75,5 @@ export class Chips {
 
     // q4. 입력된 문자열에 대한 데이터를 가져올 수 있도록 하시오.
     // TODO: Write JS code here!'
+
 }

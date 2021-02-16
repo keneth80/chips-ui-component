@@ -74,6 +74,8 @@ export class Chips {
         // 삭제 이벤트.
         this.chipElements.forEach((element, index) => {
             element.querySelector('.chips-close').addEventListener('click', () => {
+                const label = element.querySelector('.chips-label').innerHTML;
+                this.removeData(label);
                 element.remove();
             });
         });
@@ -85,6 +87,8 @@ export class Chips {
                 const newItem = this.chipTemplete(event.target.value);
                 // 삭제 이벤트 바인딩
                 newItem.querySelector('.chips-close').addEventListener('click', () => {
+                    const label = newItem.querySelector('.chips-label').innerHTML;
+                    this.removeData(label);
                     newItem.remove();
                 });
                 // 컨테이너에 추가
@@ -109,6 +113,11 @@ export class Chips {
                 event.target.value = '';
             }
         });
+    }
+
+    removeData(data) {
+        const targetIndex = this.data.findIndex((item) => item === data);
+        this.data.splice(targetIndex, 1);
     }
 
     getChips() {
